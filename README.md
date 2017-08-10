@@ -20,6 +20,7 @@ So if done right up until now you should be able to cd into the mycroft_proxy/pr
 `docker exec -it proxy_proxy_1 /bin/bash` - this will take us to a bash prompt on the container
 
 Now we are going to install a few items needed on the container to get the let's encrypt part setup:
+
 `apt-get update`
 
 `apt-get install gpg software-properties-common -y`
