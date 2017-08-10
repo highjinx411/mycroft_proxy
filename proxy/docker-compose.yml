@@ -3,6 +3,8 @@ version: '2'
 services:
   proxy:
     build: ./
+    volumes:
+      - /mycroft_proxy/proxy/ssl:/etc/ssl/certs/nginx/
     networks:
       - mycroft1
       - mycroft2
