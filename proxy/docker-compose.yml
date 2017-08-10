@@ -4,7 +4,7 @@ services:
   proxy:
     build: ./
     volumes:
-      - /mycroft_proxy/proxy:/etc/nginx/conf.d/
+      - /mycroft_proxy/proxy/default.conf:/etc/nginx/conf.d/
       - /mycroft_proxy/proxy/letsencrypt:/etc/letsencrypt
       - /mycroft_proxy/proxy/ssl:/etc/ssl/certs/nginx/
     networks:
