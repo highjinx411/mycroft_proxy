@@ -1,0 +1,8 @@
+version: '2'
+services:
+  app:
+    image: realbtotharye/dockermycroft:8_20_deb_update
+    volumes:
+      - .:/root/.mycroft
+    expose:
+      - "8181"

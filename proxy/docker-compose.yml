@@ -1,0 +1,19 @@
+version: '2'
+
+services:
+  proxy:
+    build: ./
+    networks:
+      - mycroft1
+      - mycroft2
+    ports:
+      - 443:443
+      - 8181:8181
+
+networks:
+  mycroft1:
+    external:
+      name: mycroft1_default
+  mycroft2:
+    external:
+      name: mycroft2_default
