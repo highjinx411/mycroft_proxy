@@ -20,11 +20,11 @@ So if done right up until now you should be able to cd into the mycroft_proxy/pr
 `docker exec -it proxy_proxy_1 /bin/bash` - this will take us to a bash prompt on the container
 
 Now we are going to install a few items needed on the container to get the let's encrypt part setup:
-`apt-get update
-apt-get install gpg software-properties-common -y
-add-apt-repository ppa:certbot/certbot
-apt-get update
-apt-get install python-certbot-nginx
-certbot --nginx
-`
+`apt-get update`
+`apt-get install gpg software-properties-common -y`
+`add-apt-repository ppa:certbot/certbot`
+`apt-get update`
+`apt-get install python-certbot-nginx`
+`certbot --nginx`
+
 Now we will get some menus on which domains we want to create certs for and your email address, etc.  Fill out these answers and when done you will have a secured SSL setup.
