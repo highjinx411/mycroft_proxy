@@ -29,7 +29,7 @@ Now we are going to install a few items needed on the container to get the let's
 
 `apt-get update`
 
-`apt-get install python-certbot-nginx`
+`apt-get install python-certbot-nginx -y`
 
 `certbot --nginx`
 
