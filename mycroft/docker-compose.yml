@@ -1,12 +1,8 @@
 version: '2'
-
 services:
-  proxy:
-    build: ./
+  app:
+    image: realbtotharye/dockermycroft:8_20_deb_update
     volumes:
-      - /mycroft_proxy/letsencrypt:/etc/letsencrypt
-      - /mycroft_proxy/proxy/ssl:/etc/ssl/certs/nginx
-    ports:
-      - 443:443
-      - 8181:8181
-
+      - .:/root/.mycroft
+    expose:
+      - 8181
