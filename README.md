@@ -18,6 +18,11 @@ Then run the commands to generate the self signed certs:
 
 So if done right up until now you should be able to cd into the mycroft_proxy/proxy folder and build and run the image:
 
+But before starting the proxy we need to start up mycroft:
+CD into the mycroft dir and run:
+
+`docker-compose up -d`
+
 `cd mycroft_proxy/proxy`
 
 `docker-compose build` - wait for the build to finish
