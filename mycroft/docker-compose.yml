@@ -7,7 +7,6 @@ services:
       - /mycroft_proxy/letsencrypt:/etc/letsencrypt
       - /mycroft_proxy/proxy/ssl:/etc/ssl/certs/nginx
     ports:
-      - 80:80
       - 443:443
       - 8181:8181
 
