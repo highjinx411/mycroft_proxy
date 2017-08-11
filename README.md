@@ -1,18 +1,18 @@
 # Mycroft SSL Proxy
-This is a nginx reverse proxy to allow to securely talk to mycroft instances over wss.
+This is a nginx reverse proxy to allow to securely talk to a mycroft instance over wss.
 
 # Installation
 1. Setup a docker instance and then clone the repo:
 `git clone https://github.com/Geeked-Out-Solutions/mycroft_proxy.git`
 
-2. Run the following commands to generate the self signed certs for your instances, example: mycroft1.domain.com, mycroft2.domain.com, etc
+2. Run the following commands to generate the self signed certs for your instance, example: mycroft.domain.com, 
 
 CD into the SSL dir first from the clone so that we can insert them into the container:
 `cd /mycroft_proxy/proxy/ssl`
 
 Then run the commands to generate the self signed certs:
-`openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout mycroft1.key -out mycroft1.crt`
-`openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout mycroft2.key -out mycroft2.crt`
+`openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout mycroft.key -out mycroft.crt`
+
 
 3. Now we are going to follow the information from the Let's Encrypt Certbot guide [https://certbot.eff.org/#ubuntuxenial-nginx] to setup our reverse proxy container with Let's Encrypt cert's:
 
