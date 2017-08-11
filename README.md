@@ -8,7 +8,13 @@ This is a nginx reverse proxy to allow to securely talk to a mycroft instance ov
 2. Run the following commands to generate the self signed certs for your instance, example: mycroft.domain.com, 
 
 CD into the SSL dir first from the clone so that we can insert them into the container:
-`cd /mycroft_proxy/proxy/ssl`
+
+Make the ssl directory:
+`cd /mycroft_proxy/proxy`
+
+`mkdir ssl`
+
+`cd ssl`
 
 Then run the commands to generate the self signed certs:
 `openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout mycroft.key -out mycroft.crt`
