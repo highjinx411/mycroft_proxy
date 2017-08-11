@@ -3,9 +3,6 @@ version: '2'
 services:
   proxy:
     build: ./
-    volumes:
-      - /mycroft_proxy/letsencrypt:/etc/letsencrypt
-      - /mycroft_proxy/proxy/ssl:/etc/ssl/certs/nginx
     networks:
       - mycroft
     ports:
