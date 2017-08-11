@@ -7,17 +7,13 @@ services:
       - /mycroft_proxy/letsencrypt:/etc/letsencrypt
       - /mycroft_proxy/proxy/ssl:/etc/ssl/certs/nginx
     networks:
-      - mycroft1
-      - mycroft2
+      - mycroft
     ports:
       - 80:80
       - 443:443
       - 8181:8181
 
 networks:
-  mycroft1:
+  mycroft:
     external:
-      name: mycroft1_default
-  mycroft2:
-    external:
-      name: mycroft2_default
+      name: mycroft_default
