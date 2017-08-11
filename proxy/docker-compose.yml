@@ -16,4 +16,4 @@ services:
 networks:
   mycroft:
     external:
-      name: mycroft
+      name: mycroft_default
