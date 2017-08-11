@@ -41,3 +41,8 @@ Now we are going to install a few items needed on the container to get the let's
 `certbot --nginx`
 
 Now we will get some menus on which domains we want to create certs for and your email address, etc.  Fill out these answers and when done you will have a secured SSL setup.
+
+4. To spin up the mycroft container cd into the mycroft container and run:
+`docker-compose up -d`
+
+5. Test your new setup it should now work.
