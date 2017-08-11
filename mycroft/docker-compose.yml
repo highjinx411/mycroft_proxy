@@ -13,8 +13,3 @@ services:
       - 443:443
       - 8181:8181
 
-networks:
-  mycroft:
-    external:
-      name: mycroft_default
-
