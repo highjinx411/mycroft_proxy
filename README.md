@@ -13,15 +13,16 @@ CD into the SSL dir first from the clone so that we can insert them into the con
 Then run the commands to generate the self signed certs:
 `openssl req -x509 -nodes -days 365 -newkey rsa:2048 -keyout mycroft.key -out mycroft.crt`
 
+3. Now we need to start up our mycroft instance:
 
-3. Now we are going to follow the information from the Let's Encrypt Certbot guide [https://certbot.eff.org/#ubuntuxenial-nginx] to setup our reverse proxy container with Let's Encrypt cert's:
+CD into the /mycroft_proxy/mycroft folder and run:
+`docker-compose up -d`
+
+This should start up our mycroft instance in docker.
+
+4. Now we are going to follow the information from the Let's Encrypt Certbot guide [https://certbot.eff.org/#ubuntuxenial-nginx] to setup our reverse proxy container with Let's Encrypt cert's:
 
 So if done right up until now you should be able to cd into the mycroft_proxy/proxy folder and build and run the image:
-
-But before starting the proxy we need to start up mycroft:
-CD into the mycroft dir and run:
-
-`docker-compose up -d`
 
 `cd mycroft_proxy/proxy`
 
